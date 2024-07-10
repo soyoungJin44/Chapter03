@@ -41,4 +41,22 @@ public class Point {
 	public String toString() {
 		return "Point [x=" + x + ", y=" + y + "]";   //object 기본 toString() 을 오버라이딩x,  재정의 ㅇㅇ
 	}
+
+	@Override //x==x && y===y;
+	public boolean equals(Object obj) {
+		boolean result;
+		Point p = (Point)obj;		//받은 obj값을 Point형으로 형변환해서 p에 값 대입
+			
+		if(this.x == p.x && this.y == p.y) {
+			result = true;	
+			/*return true;*/
+			
+			}else {
+				result = false;
+				/*return false;*/
+			}
+		return result;
+	}
+
+	
 }
