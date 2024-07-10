@@ -38,7 +38,17 @@ public class Rectangle {
 		System.out.println(width + height);
 	}
 	
-	public boolean equals(Rectangle)
+	public boolean equals(Object obj) {
+		Rectangle r = (Rectangle)obj;
+		boolean result;
+		
+		if(this.width == r.width && this.height == r.height) {
+			result = true;
+		}else {
+			result = false;
+		}
+		return result;
+	}
 	
 
 }
