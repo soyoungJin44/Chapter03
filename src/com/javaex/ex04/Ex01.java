@@ -1,7 +1,8 @@
 package com.javaex.ex04;
 
 public class Ex01 {
-
+	
+	//String 메소드
 	public static void main(String[] args) {
 
 		String a = new String(" abcd");
@@ -47,7 +48,28 @@ public class Ex01 {
 		//charAt()안에 입력한 숫자의 칸만 알려줘
 		char result03 = str.charAt(2 );
 		System.out.println(result03);
+		System.out.println("=====================");
 		
+		//new 로 만들어서 넣어주면 같은 class에 들어가지않음 : 주소가 다름
+		String s00 = new String("안녕하세요");
+		String s01 = new String("안녕하세요");
+		System.out.println(s00 == s01);
+		
+		//직접적으로 입력값을 넣어주면 같은 class에 들어감
+		String s03 = "안녕";
+		String s04 = "안녕";
+		System.out.println(s03 == s04);
+
+		System.out.println(s00.equals(s01)); //그래서 문자열은 equals로 비교해줘야함. >> 같은 값인지 비교해줌
+		
+		///////////***s03의 값이 null이 되면 오류남. 순서 바꿔서 쓰는게 좋음***///////////////
+		/* if(s03.equals("안녕")) {
+			System.out.println("같다");
+		} */
+		
+		if("안녕".equals(s03)) {
+			System.out.println("같다");
+		}
 		
 	}
 
